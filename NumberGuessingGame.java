@@ -2,6 +2,14 @@ import java.util.Scanner;
 
 class NumberGuessingGame{
 
+   public boolean checkChoice(int choice){
+      if(choice==1 || choice==2 || choice==3){
+         return true;
+      }else{
+         return false;
+      }
+   } //checkChoice(int choice
+
    public static void main(String[] args){
       int difficultyChoice = 0;
       int randomNumber = (int) (Math.random() * 100 + 1);
@@ -9,7 +17,7 @@ class NumberGuessingGame{
       int attempts = 0;
       int guess = 0;
       Scanner scanner = new Scanner(System.in);
-      Difficulty difficulty = new Difficulty();
+      NumberGuessingGame game = new NumberGuessingGame();
 
 
       System.out.println("Welcome to the Number Guessing Game!\n" + //
@@ -25,7 +33,7 @@ class NumberGuessingGame{
 
       difficultyChoice = scanner.nextInt();
 
-      while(!difficulty.checkChoice(difficultyChoice)){
+      while(!game.checkChoice(difficultyChoice)){
          System.out.println("Bad choice. Try another number.");
          difficultyChoice = scanner.nextInt();
       }
@@ -61,6 +69,10 @@ class NumberGuessingGame{
             System.out.println("Incorrect! The number is less than "+guess+".");
          }
       }while(guess!=randomNumber && attempts<chances);
+
+      if(guess!=randomNumber)
+         System.out.println("You have run out of chances. The correct number was "+randomNumber+".");
+      
 
 
       scanner.close();
