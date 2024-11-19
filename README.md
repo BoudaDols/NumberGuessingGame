@@ -1,7 +1,7 @@
 # NumberGuessingGame
 Number Guessing Console Game
-Link : https://github.com/BoudaDols/NumberGuessingGame.git
+Link : https://github.com/BoudaDols/NumberGuessingGame
 
 # How to run : 
-javac NumberGuessingGame.java
+javac NumberGuessingGame.java\n
 java NumberGuessingGame
