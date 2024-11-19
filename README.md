@@ -2,7 +2,7 @@
 Number Guessing Console Game
 
 
-[https://github.com/BoudaDols/NumberGuessingGame]
+[https://roadmap.sh/projects/number-guessing-game]
 
 # How to run : 
 javac NumberGuessingGame.java
